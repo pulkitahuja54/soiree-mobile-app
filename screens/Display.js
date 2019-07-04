@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {StyleSheet, Text, View, FlatList, Button } from 'react-native';
 
-const URI = 'http://3.215.63.130/api/events/';
+const URI = 'http://100.27.29.162/api/events/';
 
 class Display extends Component {
 
@@ -22,7 +22,7 @@ class Display extends Component {
 
 makeRequest = () =>
 {
-   fetch('http://3.215.63.130/api/events')
+   fetch('http://100.27.29.162/api/events')
     .then(response => response.json())    
     .then((responseJson)=> {
       console.log(responseJson);

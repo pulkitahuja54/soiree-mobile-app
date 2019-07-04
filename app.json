@@ -1,6 +1,8 @@
 {
   "expo": {
     "name": "soiree app",
+    "version" : 1.0,
+    "icon": "./assets/download.jpg",
     "slug": "soiree",
     "privacy": "public",
     "sdkVersion": "33.0.0",
@@ -24,7 +26,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.soiree.pulkit"
     }
   }
 }

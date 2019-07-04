@@ -3,7 +3,7 @@ import { Text, View, TextInput, StyleSheet, ActivityIndicator, Button, Platform,
 
 const { height, width } = require("Dimensions").get("window");
 
-const URI = 'http://3.215.63.130/api/events/';
+const URI = 'http://100.27.29.162/api/events/';
 
 
 class Edit extends Component {

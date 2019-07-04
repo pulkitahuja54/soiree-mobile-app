@@ -29,7 +29,7 @@ class Create extends Component {
         this.setState({
             isLoading: true
         })
-                    return fetch('http://3.215.63.130/api/events', data)
+                    return fetch('http://100.27.29.162/api/events', data)
                     .then((response) => response.json())
                     .then((responseJson) => {
                         this.setState({
@@ -37,7 +37,7 @@ class Create extends Component {
                             data: responseJson.data,
                         });
                     alert(JSON.stringify(responseJson));
-                    setTimeout(this.props.navigation.navigate('DisplayScreen'),5000);
+                    this.props.navigation.navigate('DisplayScreen');
                     })
                 .catch((error) => {
                     alert(error);
