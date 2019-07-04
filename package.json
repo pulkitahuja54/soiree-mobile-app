@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "braces": "^3.0.2",
     "expo": "^33.0.0",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
@@ -16,7 +17,8 @@
     "react-native-router-flux": "^4.0.6",
     "react-native-web": "^0.11.4",
     "react-navigation": "^3.11.0",
-    "react-timeout": "^1.2.0"
+    "react-timeout": "^1.2.0",
+    "ws": "^7.0.1"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.1.1"
