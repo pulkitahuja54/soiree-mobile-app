@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, StyleSheet, ActivityIndicator, Button, Platform, WebView } from 'react-native';
+import { Text, View, TextInput, StyleSheet, ActivityIndicator, Button, Platform, WebView, TouchableOpacity} from 'react-native';
 
 const { height, width } = require("Dimensions").get("window");
 
@@ -7,6 +7,9 @@ const URI = 'http://100.27.29.162/api/events/';
 
 
 class Edit extends Component {
+ static navigationOptions = {
+    title: 'Edit page',
+  };
     constructor(props) 
     {
             super(props);
@@ -69,12 +72,11 @@ class Edit extends Component {
         }
 
         return (
-            <Button
+            <TouchableOpacity
                 style={styles.buttonStyle}
-                onPress={() => this.onPressButton()}
-                title="Update Event"
-                color="#FF8976"
-            />
+                onPress={() =>   this.onPressButton()}>
+                <Text>Update Event</Text>
+            </TouchableOpacity>
         );
     }
 
@@ -83,7 +85,7 @@ class Edit extends Component {
         return (
             <View style={styles.container}>
 
-                <Text style={styles.titleStyle}>Event</Text>
+                <Text style={styles.titleStyle}>Event Name</Text>
                 <TextInput
                     style={styles.textStyle}
                     onChangeText={(text) => this.setState({ event_name: text })}
@@ -101,14 +103,17 @@ class Edit extends Component {
 const styles = StyleSheet.create({
         container: {
             flex: 1,
-            paddingTop: 60,
+            paddingTop: 10,
             alignItems: 'center',
             flexDirection: "column",
         },
         buttonStyle: {
-            height: 40,
+            height: 50,
             width: width - 20,
-            margin: 10
+            margin: 10,
+            alignItems: 'center',
+            backgroundColor: '#FF8976',
+            justifyContent: "center",
         },
         textStyle: {
             height: 40,

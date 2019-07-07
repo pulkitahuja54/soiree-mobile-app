@@ -6,6 +6,7 @@
     "slug": "soiree",
     "privacy": "public",
     "sdkVersion": "33.0.0",
+    "android" : {"package":"com.soiree.pulkit"},
     "platforms": [
       "ios",
       "android",

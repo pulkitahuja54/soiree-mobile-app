@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, StyleSheet, ActivityIndicator, Button, Platform, WebView } from 'react-native';
+import { Text, View, TextInput, StyleSheet, ActivityIndicator, Button, Platform, WebView, TouchableOpacity } from 'react-native';
 
 const { height, width } = require("Dimensions").get("window");
 
 class Create extends Component {
+ static navigationOptions = {
+    title: 'Event Creation Page',
+  };
     constructor(props) {
         super(props);
             this.state = {
@@ -56,12 +59,11 @@ class Create extends Component {
         }
 
         return (
-            <Button
+            <TouchableOpacity
                 style={styles.buttonStyle}
-                onPress={() =>  this.onPressButton()}
-                title="Create Event"
-                color="#FF8976"
-            />
+                onPress={() =>  this.onPressButton()}>
+                <Text>Create Event</Text>
+            </TouchableOpacity>
         );
     }
 
@@ -69,7 +71,7 @@ class Create extends Component {
         return (
             <View style={styles.container}>
 
-                <Text style={styles.titleStyle}>Event</Text>
+                <Text style={styles.titleStyle}>Event Name</Text>
                 <TextInput
                     style={styles.textStyle}
                     onChangeText={(text) => this.setState({ event_name: text })}
@@ -88,14 +90,17 @@ class Create extends Component {
 const styles = StyleSheet.create({
         container: {
             flex: 1,
-            paddingTop: 60,
+            paddingTop: 20,
             alignItems: 'center',
             flexDirection: "column",
         },
         buttonStyle: {
             height: 40,
             width: width - 20,
-            margin: 10
+            margin: 10,
+            alignItems: 'center',
+            backgroundColor: '#FF8976',
+            justifyContent: "center",
         },
         textStyle: {
             height: 40,
